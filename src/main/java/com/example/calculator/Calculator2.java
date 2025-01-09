@@ -11,8 +11,8 @@ public class Calculator2 {
     private ArrayList<Double> results = new ArrayList<>();
 
     //사칙연산 수행 및 결과값 반환 메서드
-    public double calculate(int number1, char operator, int number2) throws ArithmeticException {
-        double result = 0;
+    public double calculate(int number1, char operator, int number2) throws ArithmeticException, OperatorInputException {
+        double result;
 
         if (operator == '+') {
             result = number1 + number2;
@@ -28,7 +28,7 @@ public class Calculator2 {
             }
             result = (double) number1 / number2;
         } else {
-            System.out.println("사칙연산 기호를 올바르게 입력하세요(+, -, *, /)");
+            throw new OperatorInputException();
         }
         return result;
     }

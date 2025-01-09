@@ -32,7 +32,7 @@ public class App {
             try {
                 result = calculator2.calculate(number1, operator, number2);
             }
-            catch (ArithmeticException e) {
+            catch (ArithmeticException | OperatorInputException e) {
                 System.out.println(e.getMessage());
             }
 

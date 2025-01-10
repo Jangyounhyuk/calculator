@@ -8,9 +8,9 @@ public class Calculator2 {
     //캡슐화하여 컬랙션 필드 생성
     //ArrayList -> list
     private ArrayList<Double> results = new ArrayList<>();
-    int number1;
-    char operator;
-    int number2;
+    private int number1;
+    private char operator;
+    private int number2;
 
 
     //사칙연산 수행 및 결과값 반환 메서드

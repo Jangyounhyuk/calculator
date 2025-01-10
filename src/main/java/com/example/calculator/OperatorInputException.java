@@ -5,5 +5,4 @@ public class OperatorInputException extends Exception {
     public OperatorInputException() {
         super("사칙연산 기호를 올바르게 입력하세요(+, -, *, /)");
     }
-
 }

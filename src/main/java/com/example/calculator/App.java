@@ -45,6 +45,7 @@ public class App {
             //연산 결과 Calculator2 클래스의 store() 메서드를 통해 저장
             calculator2.store(result);
         }
+
         //연산 결과 조회
         System.out.println("몇 번째 연산 결과를 조회하시겠습니까?");
         int getIndex = sc.nextInt();

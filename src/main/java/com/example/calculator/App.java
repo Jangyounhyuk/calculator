@@ -28,16 +28,15 @@ public class App {
             System.out.println("두 번째 숫자를 입력하세요: ");
             int number2 = sc.nextInt();
 
-            //Calculator2 클래스의 calculate() 메서드를 통해 연산 수행
             try {
+                //Calculator2 클래스의 calculate() 메서드를 통해 연산 수행
                 result = calculator2.calculate(number1, operator, number2);
+                //결과 출력
+                System.out.println("결과 : " + result);
             }
             catch (ArithmeticException | OperatorInputException e) {
                 System.out.println(e.getMessage());
             }
-
-            //결과 출력
-            System.out.println("결과 : " + result);
 
             //반복실행 종료키 입력받기
             System.out.println("더 계산하시겠습니까? press any button. (exit 입력 시 종료)");

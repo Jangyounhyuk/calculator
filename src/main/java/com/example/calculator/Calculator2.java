@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Calculator2 {
 
     //캡슐화하여 컬랙션 필드 생성
-    //new ArrayList<Double>(); 으로 하면 명시적 형변환 주의문구?
     //ArrayList -> list
     private ArrayList<Double> results = new ArrayList<>();
 
@@ -39,8 +38,10 @@ public class Calculator2 {
     }
 
     //Getter 메서드(특정 연산 결과 조회)
-    public double getResults(int index) {
-        return results.get(index-1);
+    public double getResults(int index) throws IndexOutOfBoundsException {
+        if(index <= 0 || index > results.size()) {
+            throw new IndexOutOfBoundsException("연산 값이 존재하지 않습니다.");
+        } else return results.get(index-1);
     }
 
     //Setter 메서드

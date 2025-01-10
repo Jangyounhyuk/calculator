@@ -50,11 +50,12 @@ public class App {
         System.out.println("몇 번째 연산 결과를 조회하시겠습니까?");
         int getIndex = sc.nextInt();
         //0 이하의 수 또는 ArrayList 의 크기보다 큰 수를 index 로 입력하였을 때 발생하는 오류 방지
-        if (getIndex <= 0 || getIndex > calculator2.length()) {
-            System.out.println("연산 값이 존재하지 않습니다.");
-        } else {
+        try {
             calculator2.getResults(getIndex);
             System.out.println(getIndex + " 번째 연산 결과: " + calculator2.getResults(getIndex));
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
         }
 
         //연산 결과 수정 후 결과 확인
@@ -76,8 +77,10 @@ public class App {
         int remove = sc.nextInt();
         if (remove == 1) {
             calculator2.remove();
+            //연산 결과 삭제가 잘 적용되었는지 확인해줌
             System.out.println("연산 결과 : " + calculator2.getAllResults());
         } else {
+            //연산 결과가 삭제되지 않았는지 확인해줌
             System.out.println("연산 결과 : " + calculator2.getAllResults());
         }
     }

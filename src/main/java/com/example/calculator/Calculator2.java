@@ -8,10 +8,17 @@ public class Calculator2 {
     //캡슐화하여 컬랙션 필드 생성
     //ArrayList -> list
     private ArrayList<Double> results = new ArrayList<>();
+    int number1;
+    char operator;
+    int number2;
+
 
     //사칙연산 수행 및 결과값 반환 메서드
     public double calculate(int number1, char operator, int number2) throws ArithmeticException, OperatorInputException {
         double result;
+        this.number1 = number1;
+        this.operator = operator;
+        this.number2 = number2;
 
         if (operator == '+') {
             result = number1 + number2;

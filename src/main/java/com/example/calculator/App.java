@@ -61,6 +61,7 @@ public class App {
         //연산 결과 수정 후 결과 확인
         System.out.println("몇 번째 연산 결과를 수정하시겠습니까?");
         int setIndex = sc.nextInt();
+
         //0 이하의 수 또는 ArrayList 의 크기보다 큰 수를 index 로 입력하였을 때 발생하는 오류 방지
         if (setIndex <= 0 || setIndex > calculator2.length()) {
             System.out.println("연산 값이 존재하지 않습니다.");
